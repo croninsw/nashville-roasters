@@ -1,5 +1,7 @@
 import { createOrder } from "./CreateOrder.js"
 
+
+
 /*
     Use the `as` keyword to alias a function
     name from another module to use in this module
@@ -7,15 +9,15 @@ import { createOrder } from "./CreateOrder.js"
 */
 import { createOrder as postOrder } from "./DataManager.js"
 
-
+const $ = document.querySelector.bind("document")
 const buyButton = document.querySelector("#placeOrder")
 
 buyButton.addEventListener("click", () => {
     // Collect user input
-    const name;
-    const quantity;
-    const productId;
-    const sizeId;
+    const name = $("customerName").value;
+    const quantity = $("productQuantity").value;
+    const productId = $("productName").value;
+    const sizeId = $("productSize").value;
 
     // Build order object from input
     const newOrderObject = createOrder(name, quantity, productId, sizeId)

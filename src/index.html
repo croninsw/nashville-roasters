@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Nashville Software School</title>
@@ -7,9 +8,52 @@
 
 </head>
 
+<header>
+  <h1>Welcome to Nashville Roasters</h1>
+  <h3>Please use this form to fill out your order!</h3>
+</header>
+
 <body>
-  <button id="placeOrder"></button>
+  <fieldset>
+    <legend>
+      <input type="text" name="customerName" id="customerName" required>
+    </legend>
+
+    <legend>
+      <select name="productName" id="productName">
+        <option value="coffee" id=1>coffee</option>
+        <option value="tea" id=2>tea</option>
+        <option value="juice" id=3>juice</option>
+        <option value="bottled_water" id=4>bottled water</option>
+        <option value="bagel" id=5>bagel</option>
+        <option value="muffin" id=6>muffin</option>
+        <option value="donut" id=7>donut</option>
+        <option value="crepe" id=8>crepe</option>
+      </select>
+    </legend>
+
+    <legend>
+      <input type="text" name="productQuantity" id="productQuantity">
+    </legend>
+
+    <legend>
+      <select name="productSize" id="productSize">
+        <option value="x-small">extra small</option>
+        <option value="small">small</option>
+        <option value="medium">medium</option>
+        <option value="large">large</option>
+        <option value="x-large">extra-large</option>
+        <option value="xx-large">big boi</option>
+      </select>
+    </legend>
+  </fieldset>
+
+  <button id="placeOrder">Place your order</button>
+
+  <section id="cards"></section>
 
   <script src="./scripts/main.js" type="module"></script>
+
 </body>
+
 </html>
